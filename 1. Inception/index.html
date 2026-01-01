@@ -1,0 +1,82 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+</head>
+<body>
+    <div id="root">
+        <h1>Hello World!</h1>
+    </div>
+</body>
+</html>
+-->
+
+
+
+
+<!-- print hello world using js-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        //h1 tag created by JS and inserted into div having id root in HTML
+
+        // Create a new <h1> HTML element using JavaScript
+        const heading = document.createElement("h1");
+        // Set the content inside the <h1> element
+        heading.innerHTML ="Hello World from JavaScript!"
+
+        // Get the HTML element with id="root" from the DOM
+        const rootJS=document.getElementById("root");
+        
+        // Add (append) the <h1> element as a child inside the root element
+        rootJS.appendChild(heading);
+    </script>
+</body>
+</html>
+-->
+
+
+
+
+
+<!-- Now lets add React into our project via CDN (search react cdn on browser). Then the browser will understand React. 
+ Browser only undrstands HTML,CSS & JavaScript, but now it will understand React as well-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="root"></div><!--root is the main container (entry point) where your entire app is rendered. In HTML, the root refers to the top-most element in the document structure-->
+<!--h1 tag to be created by React and be inserted into div having id root in HTML-->
+<!--CDN links-->
+<!--crossorigin is an HTML attribute that tells the browser how to handle requests for files coming from another domain (called Cross-Origin Resource Sharing-CORS).
+Here, the file is loaded from unpkg.com, not from your own website — so it’s a cross-origin request.-->
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script><!--core of react-->
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script><!--REACT library to manipulate the DOM, is like a bridge b/w react and browser-->
+<!--Above two files have different purpose & couldn't be clubbed  into one file, first CDN of react represents core REACT
+As React runs on different devices like mobile phones(React native) etc. React DOM is for browsers-->
+<script>
+    const heading =React.createElement("h1",{},"Hello World from React!");//createElement is core property of React, so React. is used
+    //createElement takes 3 arguments, first tag we want, second object (empty here), third what content we want in the tag
+    const rootReact=ReactDOM.createRoot(document.getElementById("root"));//createRoot is React DOM property
+    rootReact.render(heading);
+</script>
+</body>
+</html>

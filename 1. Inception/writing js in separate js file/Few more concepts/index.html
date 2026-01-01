@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+</head>
+<body>
+    <div id="root">
+        <h1>This will be overwritten in few milliseconds and stays on scrren till React overwrites it, you can check by refreshing the website</h1>
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src ="./App.js"></script>
+</body>
+</html>
+
+
+
+<!--
+
+React completely controls the root
+
+HTML:
+<div id="root">
+  <h1>Old content</h1>
+</div>
+JavaScript:
+root.render(parent);
+👉 Result:
+•	Everything inside #root is REPLACED
+•	Not appended
+•	Replaced
+📌 Important word: REPLACED
+________________________________________
+What React does NOT touch
+
+Anything outside #root stays untouched:
+<h1>Above root</h1>
+
+<div id="root"></div>
+
+<h1>Below root</h1>
+✔️ React works only inside the root
+✔️ That’s why React can be used in:
+•	header
+•	footer
+•	sidebar
+•	small card
+•	partial page
+________________________________________
+Why React is called a library, not a framework
+
+•	A framework controls your entire app
+•	A library works only where you use it
+React:
+✔️ Can be injected into an existing website
+✔️ Works in a small portion
+✔️ Does not force full control
+That’s why React is a library
+________________________________________
+Order of script files matters
+
+This ❌ will break:
+<script src="App.js"></script>
+<script src="react.js"></script>
+Because:
+•	App.js uses React
+•	React is not loaded yet
+Correct order ✅:
+<script src="react.js"></script>
+<script src="react-dom.js"></script>
+<script src="App.js"></script>
+
+
+
+-->
