@@ -1,0 +1,31 @@
+{
+  "name": "2_igniting_our_app",
+  "version": "1.0.0",
+  "description": "bundling and building react app",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshutoshDubey123/React.git"
+  },
+  "keywords": [
+    "Namaste_React"
+  ],
+  "author": "AD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshutoshDubey123/React/issues"
+  },
+  "homepage": "https://github.com/AshutoshDubey123/React#readme",
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "parcel": "^2.16.3"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+}

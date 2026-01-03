@@ -14,6 +14,8 @@
 */
 
 // How nested HTML is created in React, What if there are siblings (multiple children)
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 const parent = React.createElement(
   "div",
